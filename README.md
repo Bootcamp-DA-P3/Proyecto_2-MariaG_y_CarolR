@@ -22,3 +22,23 @@ Tecnologías y librerías:
  Python (Google Colab)
  Librerías: pandas
  Control de versiones: git (repositorio), README.md
+
+
+Pasos ejecutados
+Estructura, Relaciones y Finanzas
+
+    Conexión y Carga: compartir la carpeta creada para conectar Colab con Drive para no tener que subir los CSVs manualmente cada vez que abramos el proyecto. Montar Google Drive y leer los CSVs tmdb_5000_movies.csv y tmdb_5000_credits.csv .
+    
+
+    Merge de Tablas
+    Ambos datasets comparten la columna llamada title, el parámetro axis indica la dirección (el eje) sobre el que se va a aplicar la operación, "Busca la etiqueta 'title' en las columnas (en vertical):(axis=1) y borra toda esa columna".
+    Unir los datasets por id de película usando pd.merge().
+
+    Tratamiento de Fechas: Convertir release_date a datetime y extraer release_year.
+
+    Limpieza Financiera (Ceros Encubiertos): Convertir los presupuestos (budget) e ingresos (revenue) con valor 0 a NaN para no distorsionar promedios.
+
+    Exportación Intermedia: Guardar en Drive el archivo procesado tmdb_estructurado_parte1.csv.
+    
+    
+  Cómo ejecutar el notebook, Resumen de decisiones de limpieza
