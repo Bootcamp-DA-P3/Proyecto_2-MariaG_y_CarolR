@@ -29,6 +29,7 @@ Eliminamos: películas con el parámetro subset para que revise la columna que n
 Pandas lee las fechas como texto, ajustamos. 
 Convertir los presupuestos (budget), ingresos (revenue) y duración (runtime) con valor 0 para no distorsionar promedios.
 Exportamos el archivo procesado tmdb_estructurado_parte1.csv.
-    
-    
-  Cómo ejecutar el notebook, Resumen de decisiones de limpieza
+        
+## Cómo ejecutar el notebook
+
+## Resumen de decisiones de limpieza
