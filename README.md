@@ -15,23 +15,20 @@ Limpieza de fechas: columna date_added tiene espacios en blanco iniciales o fina
 
 ## Tecnologías y librerías:
 Python (Google Colab)
+
 Librerías: pandas
+
 Control de versiones: git (repositorio), README.md
 
 
 ## Pasos ejecutados
 Compartir con permisos de Editor la carpeta de Google Drive proyecto_datos, seleccionar "Añadir acceso directo a Drive", subir ahí los CSVs (tmdb_5000_movies.csv y tmdb_5000_credits.csv) iniciales y guardarlo directamente dentro de "Mi unidad".
-Ambos datasets comparten la columna llamada title, el parámetro axis indica la dirección (el eje) sobre el que se va a aplicar la operación, "Busca la etiqueta 'title' en las columnas (en vertical):(axis=1) y borra toda esa columna".
+Leemos ambos datasets, al importar la librería pandas, que comparten columna y la borra.
 Unir los datasets por id de película usando pd.merge().
-  
-  Eliminar "Basura" (Columnas innecesarias)
-    Hay columnas que tienen demasiados nulos o que no aportan nada para un análisis estándar.
-    
-    Tratamiento de Fechas: Pandas lee las fechas como texto. Convertir release_date a datetime y extraer release_year.
-
-    Limpieza Financiera (Ceros Encubiertos): Convertir los presupuestos (budget) e ingresos (revenue) con valor 0 a NaN para no distorsionar promedios.
-
-    Exportación Intermedia: Guardar en Drive el archivo procesado tmdb_estructurado_parte1.csv.
+Eliminamos: películas con el parámetro subset para que revise la columna que no tenga fecha de estreno, demasiados nulos...    
+Pandas lee las fechas como texto, ajustamos. 
+Convertir los presupuestos (budget), ingresos (revenue) y duración (runtime) con valor 0 para no distorsionar promedios.
+Exportamos el archivo procesado tmdb_estructurado_parte1.csv.
     
     
   Cómo ejecutar el notebook, Resumen de decisiones de limpieza
